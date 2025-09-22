@@ -48,7 +48,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled || currentPage !== "inicio"
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,14 +66,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             <div>
               <h1
                 className={`text-xl font-bold transition-colors ${
-                  isScrolled ? "text-blue-800" : "text-white"
+                  isScrolled || currentPage !== "inicio"
+                    ? "text-blue-800"
+                    : "text-white"
                 }`}
               >
                 JUMAVI
               </h1>
               <p
                 className={`text-xs transition-colors ${
-                  isScrolled ? "text-blue-600" : "text-blue-100"
+                  isScrolled || currentPage !== "inicio"
+                    ? "text-blue-600"
+                    : "text-blue-100"
                 }`}
               >
                 Juventud Mariana Vicentina
@@ -90,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     currentPage === item.key
                       ? "bg-blue-600 text-white shadow-md"
-                      : isScrolled
+                      : isScrolled || currentPage !== "inicio"
                       ? "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
                       : "text-white hover:bg-white/10"
                   }`}
@@ -106,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled
+              isScrolled || currentPage !== "inicio"
                 ? "text-gray-700 hover:bg-gray-100"
                 : "text-white hover:bg-white/10"
             }`}

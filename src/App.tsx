@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import FourNotes from './components/FourNotes';
-import Mission from './components/Mission';
-import International from './components/International';
-import Projects from './components/Projects';
-import News from './components/News';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import FourNotes from "./components/FourNotes";
+import Mission from "./components/Mission";
+import International from "./components/International";
+import Projects from "./components/Projects";
+import News from "./components/News";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('inicio');
+  const [currentPage, setCurrentPage] = useState("inicio");
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'inicio':
+      case "inicio":
         return (
           <>
             <Hero />
@@ -24,19 +24,19 @@ function App() {
             <Mission />
           </>
         );
-      case 'quienes-somos':
+      case "quienes-somos":
         return <About full={true} />;
-      case 'notas-distintivas':
+      case "notas-distintivas":
         return <FourNotes full={true} />;
-      case 'mision':
+      case "mision":
         return <Mission full={true} />;
-      case 'internacional':
+      case "internacional":
         return <International />;
-      case 'proyectos':
+      case "proyectos":
         return <Projects />;
-      case 'noticias':
+      case "noticias":
         return <News />;
-      case 'contacto':
+      case "contacto":
         return <Contact />;
       default:
         return (
@@ -53,9 +53,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
-        {renderPage()}
-      </main>
+      <main>{renderPage()}</main>
       <Footer setCurrentPage={setCurrentPage} />
     </div>
   );

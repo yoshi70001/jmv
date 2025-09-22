@@ -1,80 +1,124 @@
-import React, { useState } from 'react';
-import { Globe, Users, MapPin, Heart, Award, Briefcase, GraduationCap } from 'lucide-react';
+import React, { useState } from "react";
+import { Globe, Users, MapPin, Heart, Award, Briefcase } from "lucide-react";
 
 const International: React.FC = () => {
-  const [selectedCountry, setSelectedCountry] = useState('paraguay');
+  const [selectedCountry, setSelectedCountry] = useState("paraguay");
 
   const countries = [
     {
-      id: 'paraguay',
-      name: 'Paraguay',
-      flag: '🇵🇾',
-      members: '200+',
-      locations: '8',
-      established: '1995',
-      description: 'Una de las provincias más activas de Sudamérica, con presencia en las principales ciudades del país.',
+      id: "paraguay",
+      name: "Paraguay",
+      flag: "🇵🇾",
+      members: "200+",
+      locations: "8",
+      established: "1995",
+      description:
+        "Una de las provincias más activas de Sudamérica, con presencia en las principales ciudades del país.",
       projects: [
-        'Comedores comunitarios en barrios vulnerables',
-        'Programas de alfabetización para adultos',
-        'Apoyo escolar para niños en riesgo social',
-        'Visitas a asilos y hospitales'
+        "Comedores comunitarios en barrios vulnerables",
+        "Programas de alfabetización para adultos",
+        "Apoyo escolar para niños en riesgo social",
+        "Visitas a asilos y hospitales",
       ],
-      coordinator: 'María González',
-      cities: ['Asunción', 'Ciudad del Este', 'Encarnación', 'Pedro Juan Caballero', 'Coronel Oviedo', 'Caaguazú', 'Villarrica', 'Concepción']
+      coordinator: "María González",
+      cities: [
+        "Asunción",
+        "Ciudad del Este",
+        "Encarnación",
+        "Pedro Juan Caballero",
+        "Coronel Oviedo",
+        "Caaguazú",
+        "Villarrica",
+        "Concepción",
+      ],
     },
     {
-      id: 'portugal',
-      name: 'Portugal',
-      flag: '🇵🇹',
-      members: '150+',
-      locations: '12',
-      established: '1960',
-      description: 'Pioneros en Europa con el proyecto innovador "Renacer a la Esperanza" que ha transformado vidas.',
+      id: "portugal",
+      name: "Portugal",
+      flag: "🇵🇹",
+      members: "150+",
+      locations: "12",
+      established: "1960",
+      description:
+        'Pioneros en Europa con el proyecto innovador "Renacer a la Esperanza" que ha transformado vidas.',
       projects: [
         'Proyecto "Renacer a la Esperanza" para jóvenes en riesgo',
-        'Banco de alimentos para familias necesitadas',
-        'Acompañamiento a personas sin hogar',
-        'Talleres de formación laboral'
+        "Banco de alimentos para familias necesitadas",
+        "Acompañamiento a personas sin hogar",
+        "Talleres de formación laboral",
       ],
-      coordinator: 'João Silva',
-      cities: ['Lisboa', 'Porto', 'Braga', 'Coimbra', 'Setúbal', 'Faro', 'Aveiro', 'Viseu', 'Leiria', 'Santarém', 'Évora', 'Bragança']
+      coordinator: "João Silva",
+      cities: [
+        "Lisboa",
+        "Porto",
+        "Braga",
+        "Coimbra",
+        "Setúbal",
+        "Faro",
+        "Aveiro",
+        "Viseu",
+        "Leiria",
+        "Santarém",
+        "Évora",
+        "Bragança",
+      ],
     },
     {
-      id: 'peru',
-      name: 'Perú',
-      flag: '🇵🇪',
-      members: '400+',
-      locations: '15',
-      established: '1866',
-      description: 'La provincia más antigua de América Latina, con una rica tradición vicentina que se remonta al siglo XIX.',
+      id: "peru",
+      name: "Perú",
+      flag: "🇵🇪",
+      members: "400+",
+      locations: "15",
+      established: "1866",
+      description:
+        "La provincia más antigua de América Latina, con una rica tradición vicentina que se remonta al siglo XIX.",
       projects: [
-        'Ollas comunes en pueblos jóvenes de Lima',
-        'Escuelas de formación técnica en Arequipa',
-        'Atención médica básica en zonas rurales',
-        'Programas de microcréditos para mujeres emprendedoras'
+        "Ollas comunes en pueblos jóvenes de Lima",
+        "Escuelas de formación técnica en Arequipa",
+        "Atención médica básica en zonas rurales",
+        "Programas de microcréditos para mujeres emprendedoras",
       ],
-      coordinator: 'Ana Rodríguez',
-      cities: ['Lima', 'Arequipa', 'Trujillo', 'Chiclayo', 'Huancayo', 'Cusco', 'Iquitos', 'Tacna', 'Piura', 'Chimbote', 'Ayacucho', 'Huaraz', 'Cajamarca', 'Puno', 'Ica']
-    }
+      coordinator: "Ana Rodríguez",
+      cities: [
+        "Lima",
+        "Arequipa",
+        "Trujillo",
+        "Chiclayo",
+        "Huancayo",
+        "Cusco",
+        "Iquitos",
+        "Tacna",
+        "Piura",
+        "Chimbote",
+        "Ayacucho",
+        "Huaraz",
+        "Cajamarca",
+        "Puno",
+        "Ica",
+      ],
+    },
   ];
 
   const globalStats = [
-    { number: '78', label: 'Países', icon: Globe },
-    { number: '30,000+', label: 'Jóvenes', icon: Users },
-    { number: '5', label: 'Continentes', icon: MapPin },
-    { number: '194', label: 'Años de Historia', icon: Award }
+    { number: "78", label: "Países", icon: Globe },
+    { number: "30,000+", label: "Jóvenes", icon: Users },
+    { number: "5", label: "Continentes", icon: MapPin },
+    { number: "194", label: "Años de Historia", icon: Award },
   ];
 
-  const currentCountry = countries.find(c => c.id === selectedCountry) || countries[0];
+  const currentCountry =
+    countries.find((c) => c.id === selectedCountry) || countries[0];
 
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-blue-900 mb-6">Presencia Internacional</h1>
+          <h1 className="text-5xl font-bold text-blue-900 mb-6">
+            Presencia Internacional
+          </h1>
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            JUMAVI está presente en los cinco continentes, uniendo a jóvenes de diferentes culturas 
-            bajo el mismo carisma vicentino y mariano.
+            JUMAVI está presente en los cinco continentes, uniendo a jóvenes de
+            diferentes culturas bajo el mismo carisma vicentino y mariano.
           </p>
         </div>
 
@@ -83,11 +127,16 @@ const International: React.FC = () => {
           {globalStats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div key={index} className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-yellow-400" />
                 </div>
-                <div className="text-3xl font-bold text-blue-900 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-blue-900 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             );
@@ -97,7 +146,9 @@ const International: React.FC = () => {
         {/* Country Selector */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="bg-gradient-to-r from-blue-900 to-purple-900 p-6">
-            <h2 className="text-2xl font-bold text-white text-center mb-6">Conoce Nuestra Presencia</h2>
+            <h2 className="text-2xl font-bold text-white text-center mb-6">
+              Conoce Nuestra Presencia
+            </h2>
             <div className="flex flex-wrap justify-center gap-4">
               {countries.map((country) => (
                 <button
@@ -105,8 +156,8 @@ const International: React.FC = () => {
                   onClick={() => setSelectedCountry(country.id)}
                   className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all ${
                     selectedCountry === country.id
-                      ? 'bg-yellow-400 text-blue-900'
-                      : 'bg-white/10 text-white hover:bg-white/20'
+                      ? "bg-yellow-400 text-blue-900"
+                      : "bg-white/10 text-white hover:bg-white/20"
                   }`}
                 >
                   <span className="text-2xl">{country.flag}</span>
@@ -123,8 +174,12 @@ const International: React.FC = () => {
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="text-4xl">{currentCountry.flag}</span>
                   <div>
-                    <h3 className="text-3xl font-bold text-blue-900">{currentCountry.name}</h3>
-                    <p className="text-gray-600">Desde {currentCountry.established}</p>
+                    <h3 className="text-3xl font-bold text-blue-900">
+                      {currentCountry.name}
+                    </h3>
+                    <p className="text-gray-600">
+                      Desde {currentCountry.established}
+                    </p>
                   </div>
                 </div>
 
@@ -134,15 +189,21 @@ const International: React.FC = () => {
 
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-900">{currentCountry.members}</div>
+                    <div className="text-2xl font-bold text-blue-900">
+                      {currentCountry.members}
+                    </div>
                     <div className="text-gray-600">Miembros</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-900">{currentCountry.locations}</div>
+                    <div className="text-2xl font-bold text-blue-900">
+                      {currentCountry.locations}
+                    </div>
                     <div className="text-gray-600">Sedes</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-900">{currentCountry.established}</div>
+                    <div className="text-2xl font-bold text-blue-900">
+                      {currentCountry.established}
+                    </div>
                     <div className="text-gray-600">Fundación</div>
                   </div>
                 </div>
@@ -150,7 +211,9 @@ const International: React.FC = () => {
                 <div className="bg-blue-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <Briefcase className="w-6 h-6 text-blue-700" />
-                    <h4 className="text-lg font-semibold text-blue-900">Coordinación Nacional</h4>
+                    <h4 className="text-lg font-semibold text-blue-900">
+                      Coordinación Nacional
+                    </h4>
                   </div>
                   <p className="text-gray-700">{currentCountry.coordinator}</p>
                 </div>
@@ -180,7 +243,10 @@ const International: React.FC = () => {
                   </h4>
                   <div className="grid grid-cols-2 gap-3">
                     {currentCountry.cities.map((city, index) => (
-                      <div key={index} className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-gray-700 text-sm">
+                      <div
+                        key={index}
+                        className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-gray-700 text-sm"
+                      >
                         {city}
                       </div>
                     ))}
@@ -193,21 +259,29 @@ const International: React.FC = () => {
 
         {/* Regional Overview */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-          <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">Presencia por Continentes</h2>
+          <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
+            Presencia por Continentes
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">Europa</h3>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Europa
+              </h3>
               <p className="text-gray-600">25 países</p>
             </div>
             <div className="text-center">
               <div className="text-4xl mb-4">🌎</div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">América</h3>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                América
+              </h3>
               <p className="text-gray-600">23 países</p>
             </div>
             <div className="text-center">
               <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">África</h3>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                África
+              </h3>
               <p className="text-gray-600">18 países</p>
             </div>
             <div className="text-center">
@@ -217,7 +291,9 @@ const International: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl mb-4">🌏</div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">Oceanía</h3>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Oceanía
+              </h3>
               <p className="text-gray-600">2 países</p>
             </div>
           </div>

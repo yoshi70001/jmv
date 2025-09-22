@@ -1,14 +1,17 @@
-import React from 'react';
-import { Heart, Users, Globe, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Heart, Users, ArrowRight } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-24">
@@ -21,17 +24,18 @@ const Hero: React.FC = () => {
                 Desde 1830 al servicio de los más necesitados
               </span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Juventud
               <span className="block text-yellow-400">Mariana</span>
               <span className="block">Vicentina</span>
             </h1>
-            
+
             <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-              Un movimiento juvenil internacional que vive el carisma de San Vicente de Paúl 
-              y Santa Luisa de Marillac, presente en 78 países con más de 30,000 jóvenes 
-              comprometidos con la transformación social.
+              Un movimiento juvenil internacional que vive el carisma de San
+              Vicente de Paúl y Santa Luisa de Marillac, presente en 78 países
+              con más de 30,000 jóvenes comprometidos con la transformación
+              social.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -47,15 +51,21 @@ const Hero: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">78</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">
+                  78
+                </div>
                 <div className="text-blue-100">Países</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">30,000+</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">
+                  30,000+
+                </div>
                 <div className="text-blue-100">Jóvenes</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">194</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">
+                  194
+                </div>
                 <div className="text-blue-100">Años de Historia</div>
               </div>
             </div>
@@ -82,12 +92,14 @@ const Hero: React.FC = () => {
                     <div className="font-semibold text-blue-700">Mariana</div>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="font-semibold text-blue-700">Vicenciana</div>
+                    <div className="font-semibold text-blue-700">
+                      Vicenciana
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-300 rounded-full opacity-20"></div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-600 rounded-full opacity-20"></div>

@@ -10,7 +10,7 @@ import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig({
   // Configuración base
-  base: "/jmv/", // Cambia esto si tu repo tiene otro nombre
+  base: "/", // Cambia esto si tu repo tiene otro nombre
   plugins: [
     react(),
     svgr(), // Permite importar SVGs como componentes de React
